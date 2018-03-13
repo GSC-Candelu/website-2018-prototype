@@ -1,0 +1,9 @@
+{% if ctx.0.program %}
+    <div class="row row_1_of_2">
+    </div>
+    <div class="row row_1_of_2">
+        <img src="{{ ctx.0.img }}volantino_{{ ctx.0.year }}-0.jpg">
+    </div>
+{% else %}
+    <img src="{{ ctx.0.img }}volantino_{{ ctx.0.year }}-0.jpg">
+{% endif %}

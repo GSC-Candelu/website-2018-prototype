@@ -18,21 +18,12 @@
 
     <!-- second column: volantino (+ program) -->
 	<div class="col span_1_of_3">
-    	<img src="{{ ctx.0.img }}volantino_{{ ctx.0.year }}-0.jpg">
+    	{% include "_hp_main.html" %}
 	</div>
 
     <!-- third column: carte + moto + pedalata (+ pitona) -->
 	<div class="col span_1_of_3">
-        <div class="row row_1_of_3">
-        	<img src="{{ ctx.0.img }}eventi-scopa-{{ ctx.0.year }}.jpg">
-        </div>
-
-        <div class="row row_1_of_3">
-        	<img src="{{ ctx.0.img }}eventi-moto-{{ ctx.0.year }}.jpg">
-        </div>
-        <div class="row row_1_of_3">
-        	<img src="{{ ctx.0.img }}pedalata.jpg">
-        </div>
+        {% include "_hp_events.html" %}
 	</div>
 </div>
 {% endblock %}

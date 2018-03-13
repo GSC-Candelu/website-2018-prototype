@@ -1,5 +1,8 @@
 [{
-        "year": 2018,
-        "logo": "gsc.jpg",
-        "img": "/img/"
+    "year": 2018,
+    "img": "/img/",
+    "logo": "gsc.jpg",
+    "wines_list": false,
+    "program": false,
+    "pitona": false
 }]
