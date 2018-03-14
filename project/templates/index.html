@@ -1,19 +1,13 @@
 {% extends "base.html" %}
 
-{% block title %}Sagra del Primo del Majo {{ ctx.0.year }}{% endblock %}
+{% block title %}Gruppo Sportivo &amp; Culturale{% endblock %}
 
 {% block content %}
 <div class="section group">
 
     <!-- first column: logo + map -->
     <div class="col span_1_of_3">
-        <div class="row row_1_of_2">
-        	<img src="{{ ctx.0.img }}{{ ctx.0.logo }}">
-        </div>
-
-        <div class="row row_1_of_2">
-            {% include "_map.html" %}
-        </div>
+        {% include "_hp_hero.html" %}
 	</div>
 
     <!-- second column: volantino (+ program) -->

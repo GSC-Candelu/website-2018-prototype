@@ -1,7 +1,17 @@
 {% extends "base.html" %}
 
-{% if ctx.0.wines_list %}
+{% block title %}
+    {{ ctx.0.wines_edition }} Mostra dei Vini {{ ctx.0.year }}
+{% endblock %}
 
-{% else %}
+{% block navbar %}
+    {% include "_navbar.html" %}
+{% endblock %}
 
-{% endif %}
+{% block content %}
+    {% if ctx.0.wines_list %}
+
+    {% else %}
+
+    {% endif %}
+{% endblock %}
