@@ -1,16 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
+    <meta charset="utf-8">
     <title>{% block title %}{% endblock %} - Sagra del Primo del Majo {{ ctx.0.year }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/css/style.css" rel="stylesheet">
-</head>
-<body>
+    <meta name="description" content="Gruppo Sportivo &amp; Culturale - Sagra del Primo de Majo">
+    <meta name="author" content="Gruppo Sportivo &amp; Culturale">
 
-    {% block nav %}{% endblock %}
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="/css/global.css" rel="stylesheet">
 
-    {% block content %}{% endblock %}
+    <!--[if lt IE 9]>
+      <script src="/js/html5shiv.js"></script>
+    <![endif]-->
 
-    <script src="/js/script.js"></script>
-</body>
+    <link rel="shortcut icon" href="/img/favicon.png">
+  </head>
+
+  <body>
+
+    {% block navbar %}
+        {% include "base_navbar.html" %}
+    {% endblock %}
+
+    {% block content %}
+        <div id="myCarousel" class="carousel slide">
+          <div class="carousel-inner">
+              {% block carousel_items %}{% endblock %}
+          <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+          <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+        </div>
+
+        <div class="container marketing">
+          <footer>
+            <p class="pull-right"><a href="#">Torna all'inizio</a></p>
+            <p>&copy; {{ ctx.0.year }} Gruppo Sportivo &amp; Culturale.</p>
+          </footer>
+        </div>
+    {% endblock content %}
+
+    <script src="/js/jquery.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+
+    {% block script %}
+        <script>
+          !function ($) {
+            $(function(){
+              // carousel demo
+              $('#myCarousel').carousel()
+            })
+          }(window.jQuery)
+        </script>
+        <script src="/js/holder.js"></script>
+    {% endblock script %}
+  </body>
 </html>

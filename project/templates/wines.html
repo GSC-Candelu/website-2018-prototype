@@ -4,14 +4,19 @@
     {{ ctx.0.wines_edition }} Mostra dei Vini {{ ctx.0.year }}
 {% endblock %}
 
-{% block navbar %}
-    {% include "_navbar.html" %}
-{% endblock %}
-
-{% block content %}
-    {% if ctx.0.wines_list %}
-
-    {% else %}
-
+{% block carousel_items %}
+    <div class="item active">
+      <img src="{{ ctx.0.img }}volantino_{{ ctx.0.year }}-0.jpg"
+           alt="">
+      <div class="container"></div>
+    </div>
+    {% if ctx.0.wines %}
+        {% for page in ctx.0.wines_pages %}
+            <div class="item active">
+              <img src="{{ ctx.0.img }}volantino_{{ ctx.0.year }}-{{ page }}.jpg"
+                   alt="">
+              <div class="container"></div>
+            </div>
+        {% endfor %}
     {% endif %}
 {% endblock %}
