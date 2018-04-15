@@ -27,12 +27,17 @@
     {% block content %}
         <div id="myCarousel" class="carousel slide">
           <div class="carousel-inner">
-              {% block carousel_items %}{% endblock %}
-          <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-          <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+              {% block carousel_items %}
+              {% endblock %}
+          </div>
+          {% block carousel_controls %}
+              <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+              <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+          {% endblock %}
         </div>
 
-        <div class="container marketing">
+        <div class="container generic">
+          <div class="row"></div>
           <footer>
             <p class="pull-right"><a href="#">Torna all'inizio</a></p>
             <p>&copy; {{ ctx.0.year }} Gruppo Sportivo &amp; Culturale.</p>
@@ -48,11 +53,12 @@
           !function ($) {
             $(function(){
               // carousel demo
-              $('#myCarousel').carousel()
+              $('#myCarousel').carousel({
+                  interval: false
+              })
             })
           }(window.jQuery)
         </script>
-        <script src="/js/holder.js"></script>
     {% endblock script %}
   </body>
 </html>

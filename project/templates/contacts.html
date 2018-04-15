@@ -1,27 +1,34 @@
 {% extends "base.html" %}
 
+{% block title %}
+    Contatti
+{% endblock title %}
+
 {% block content %}
 
-    <div class="container marketing">
+    <div class="container generic contacts">
       <div class="row">
         <div class="span4">
-          <img class="img-circle" data-src="holder.js/140x140">
           <h2>Heading</h2>
-          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-        </div><!-- /.span4 -->
+          <p>Piazza Pio X</p>
+          <p>31052 Candelù di Maserada sul Piave</p>
+          <p>Telefono: Sig. Lorenzo Mattiuzzo (+39)3355424049</p>
+          <p>E-Mail: <a href="mailto:info@gscandelu.it">info@gscandelu.it</a></p>
+        </div>
         <div class="span4">
-          <img class="img-circle" data-src="holder.js/140x140">
-          <h2>Heading</h2>
-          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-        </div><!-- /.span4 -->
+          <h2>Mostra dei Vini</h2>
+          <p>Telefono: Sig. Danilo Fuser (+39)3495110220</p>
+          <p>E-Mail: <a href="mailto:mostradeivinicandelu@libero.it">mostradeivinicandelu@libero.it</a> | <a href="mailto:fuser.danilo@libero.it">fuser.danilo@libero.it</a></p>
+        </div>
         <div class="span4">
-          <img class="img-circle" data-src="holder.js/140x140">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-        </div><!-- /.span4 -->
+          <h2>Pitona</h2>
+          <p>Telefono: Sig. Alberto Grosso (+39)3391325591</p>
+          <p>E-Mail: <a href="mailto:pitona@gscandelu.it">pitona@gscandelu.it</a> | <a href="mailto:alberto.grosso1984@libero.it">alberto.grosso1984@libero.it</a></p>
+        </div>
+      </div>
+
+      <div class="row">
+          {% include "base_map.html" %}
       </div>
 
       <footer>

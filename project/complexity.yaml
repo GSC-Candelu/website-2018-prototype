@@ -3,9 +3,4 @@ templates_dir: "templates"
 assets_dir: "assets"
 context_dir: "context"
 output_dir: "../www"
-
-unexpanded_templates:
-    - "/templates/contacts.html"
-    - "/templates/events.html"
-    - "/templates/pitona.html"
-    - "/templates/wines.html"
+unexpand_all: true
