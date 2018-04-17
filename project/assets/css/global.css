@@ -57,8 +57,8 @@ a:visited {
 /* CAROUSEL
 -------------------------------------------------- */
 .carousel {
-  margin-top: 150px;
-  margin-bottom: 60px;
+  margin-top: 130px;
+  margin-bottom: 30px;
 }
 
 .carousel .container {
@@ -67,55 +67,91 @@ a:visited {
 }
 
 .carousel-control {
-  height: 80px;
-  margin-top: 0;
-  font-size: 120px;
-  text-shadow: 0 1px 1px rgba(36,89,23,.5);
-  background-color: transparent;
+  height: 65px;
+  margin-top: -150px;
+  font-size: 150px;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.7);
+  background-color: rgba(36,89,23,0.7);
   border: 0;
   z-index: 10;
-}
-.carousel .item {
-    min-height: 1050px;
-}
-.carousel img {
-  position: absolute;
-  top: 0;
-  left: 22%;
-  width: 55%;
 }
 .carousel-caption {
   background-color: transparent;
   position: static;
-  max-width: 550px;
-  padding: 0 20px;
-  margin-top: 200px;
+  width: 100%;
+  margin-top: 370px;
+  height: 115px;
+  display: block;
+  text-align: center;
+  padding-left: 13%;
 }
-.carousel-caption h1,
-.carousel-caption .lead {
+.well {
+    background-color: rgba(36,89,23,0.7);
+    width: 70%;
+    margin: 0;
+}
+.carousel-caption .well h1,
+.carousel-caption .well .lead {
+  color: #fff;
   margin: 0;
   line-height: 1.25;
-  text-shadow: 0 1px 1px rgba(0,0,0,.4);
+  text-shadow: 0 1px 1px rgba(0,0,0,0.4);
 }
-.carousel-caption .btn {
+.carousel-caption .well .btn {
   margin-top: 10px;
+  color: #fff;
+}
+
+/* Carousel: standard pages, 1430px height, 80% width */
+.carousel .item {
+    height: 1430px;
+}
+
+.carousel img {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 80%;
+}
+
+/* Carousel: home page, fixed height, 100% width */
+.homepage {
+    max-height: 800px;
+    left: 0px;
+}
+.homepage img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.readjust {
+    margin-top: -130px;
 }
 
 /* CONTENT
 -------------------------------------------------- */
-.generic .span4 {
+.generic .span4,
+.generic .span6,
+.generic .span12 {
   text-align: center;
 }
 .generic h2 {
   font-weight: normal;
 }
-.generic .span4 p {
+.generic .span4 p,
+.generic .span6 p,
+.generic .span12 p {
   color: #245917;
   margin-left: 10px;
   margin-right: 10px;
 }
 .contacts {
     margin-top: 100px;
+}
+.map {
+    margin-top: 35px;
+    padding-left: 25%;
 }
 
 footer { color: #245917; }

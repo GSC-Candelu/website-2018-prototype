@@ -1,15 +1,13 @@
 {% extends "base.html" %}
 
-{% block title %}
-    Eventi
-{% endblock %}
+{% block title %}Eventi{% endblock %}
 
 {% block carousel_items %}
 
     {% if ctx.0.scopa %}
         <div class="item active">
           <img src="{{ ctx.0.img }}eventi-scopa-{{ ctx.0.year }}.jpg"
-               alt="">
+               alt="Gara di Scopa all'asso {{year}}">
           <div class="container"></div>
         </div>
     {% endif %}
@@ -17,7 +15,7 @@
     {% if ctx.0.moto %}
         <div class="item">
           <img src="{{ ctx.0.img }}eventi-moto-{{ ctx.0.year }}.jpg"
-               alt="">
+               alt="Moto concentrazione 'Su e so par ponti e caneve' memorial Piero Voltarel {{year}}">
           <div class="container"></div>
         </div>
     {% endif %}
@@ -25,7 +23,7 @@
     {% if ctx.0.pedalata %}
         <div class="item">
           <img src="{{ ctx.0.img }}pedalata.jpg"
-               alt="">
+               alt="Pedalata Ecologica {{year}}">
           <div class="container"></div>
         </div>
     {% endif %}

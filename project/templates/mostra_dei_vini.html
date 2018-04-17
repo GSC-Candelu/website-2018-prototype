@@ -1,14 +1,12 @@
 {% extends "base.html" %}
 
-{% block title %}
-    {{ ctx.0.wines_edition }} Mostra dei Vini
-{% endblock %}
+{% block title %}{{ ctx.0.wines_edition }} Mostra dei Vini del Piave{% endblock %}
 
 {% block carousel_items %}
 
     <div class="item active">
       <img src="{{ ctx.0.img }}volantino_{{ ctx.0.year }}-0.jpg"
-           alt="">
+           alt="{{ ctx.0.wines_edition }} Mostra dei Vini del Piave - volantino">
       <div class="container"></div>
     </div>
 
@@ -16,7 +14,7 @@
         {% for page in ctx.0.wines_pages %}
             <div class="item">
               <img src="{{ ctx.0.img }}mostra-dei-vini-{{ ctx.0.year }}-{{ page }}.jpg"
-                   alt="">
+                   alt="{{ ctx.0.wines_edition }} Mostra dei Vini del Piave - Aziende Espositrici - Pagina {{ page }}">
               <div class="container"></div>
             </div>
         {% endfor %}
