@@ -9,6 +9,7 @@
 
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href="/css/global.css" rel="stylesheet">
 
     <!--[if lt IE 9]>
@@ -25,18 +26,18 @@
     {% endblock %}
 
     {% block content %}
-        <div id="myCarousel" class="carousel {% block readjust %}{% endblock %} slide">
+        <div id="myCarousel" class="carousel {% block carousel_extra_styles %}{% endblock %} slide">
           <div class="carousel-inner">
               {% block carousel_items %}
               {% endblock %}
           </div>
           {% block carousel_controls %}
-              <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-              <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+              <a class="left carousel-control {% block control_left_extra_styles %}{% endblock %}" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+              <a class="right carousel-control {% block control_right_extra_styles %}{% endblock %}" href="#myCarousel" data-slide="next">&rsaquo;</a>
           {% endblock %}
         </div>
 
-        <div class="container generic {% block readjust_footer %}{% endblock %}">
+        <div class="container generic {% block footer_extra_styles %}{% endblock %}">
           <div class="row"></div>
           <footer>
             <p class="pull-right"><a href="#">Torna all'inizio</a></p>

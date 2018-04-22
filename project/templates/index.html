@@ -3,8 +3,10 @@
 {% block title %}Gruppo Sportivo &amp; Culturale{% endblock %}
 
 
-{% block readjust %}readjust{% endblock %}
-{% block readjust_footer %}readjust{% endblock %}
+{% block carousel_extra_styles %}readjust{% endblock %}
+{% block control_left_extra_styles %}readjust-control{% endblock %}
+{% block control_right_extra_styles %}readjust-control{% endblock %}
+{% block footer_extra_styles %}readjust{% endblock %}
 {% block carousel_items %}
 
     <div class="item homepage active">
@@ -22,7 +24,7 @@
 
     {% if ctx.0.program %}
         <div class="item homepage">
-          <img src="{{ ctx.0.img }}volantino_sagra_{{ ctx.0.year }}-programma.jpg" alt="">
+          <img src="{{ ctx.0.img }}programma_sagra_{{ ctx.0.year }}.jpg" alt="">
           <div class="container">
             <div class="carousel-caption">
                 <div class="well">
@@ -36,7 +38,7 @@
 
     {% if ctx.0.volantino %}
         <div class="item homepage">
-          <img src="{{ ctx.0.img }}volantino_{{ ctx.0.year }}-0.jpg" alt="">
+          <img src="{{ ctx.0.img }}volantino_sagra_{{ ctx.0.year }}.jpg" alt="">
           <div class="container">
             <div class="carousel-caption">
                 <div class="well">
